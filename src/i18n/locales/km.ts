@@ -75,6 +75,7 @@ export const km = {
       visitUs: "អាសយដ្ឋាន",
       openDaily: "បើករាល់ថ្ងៃ រួមទាំងថ្ងៃឈប់សម្រាកសាធារណៈ។",
       copyright: "© 2026 Well Dental Care. រក្សាសិទ្ធិគ្រប់យ៉ាង។",
+      developer: "បង្កើតដោយ Sonarith Seng — Fullstack Developer",
       privacy: "គោលការណ៍ឯកជនភាព",
       terms: "លក្ខខណ្ឌប្រើប្រាស់",
     },

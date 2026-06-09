@@ -76,6 +76,7 @@ export const en = {
       visitUs: "Visit Us On",
       openDaily: "Open daily, including public holidays.",
       copyright: "© 2026 Well Dental Care. All rights reserved.",
+      developer: "Developed by Sonarith Seng — Fullstack Developer",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
