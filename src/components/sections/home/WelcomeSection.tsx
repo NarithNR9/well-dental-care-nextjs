@@ -4,7 +4,7 @@ import type { Dictionary } from "@/i18n/config";
 
 export function WelcomeSection({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <SectionContainer className="bg-[linear-gradient(180deg,rgba(254,250,233,0)_50%,#FEFAE9_100%)] lg:mx-15">
+    <SectionContainer className="bg-[linear-gradient(180deg,rgba(254,250,233,0)_50%,#FEFAE9_100%)] lg:px-32">
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1fr]">
         <div className="max-w-xl">
           <p className="text-base font-semibold text-neutral-900">
