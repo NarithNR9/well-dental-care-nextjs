@@ -1,0 +1,83 @@
+export const en = {
+  nav: {
+    home: "Home",
+    about: "About Us",
+    service: "Service",
+    technology: "Technology",
+    result: "Result",
+    ourClinic: "Our Clinic",
+    blog: "Blog",
+    contact: "Contact Us",
+  },
+  common: {
+    bookAppointment: "Book Appointment",
+    callNow: "Call Now",
+    learnMore: "Learn More",
+    readMore: "Read More",
+    viewOnGoogleMaps: "View on Google Maps",
+    chatWithUs: "Chat With Us",
+  },
+  home: {
+    hero: {
+      label: "Well Dental Care",
+      headingPrefix: "A New Life Begin With",
+      headingHighlight: "A Confident Smile.",
+      supporting: "Friendly dental care for every generation",
+    },
+    welcome: {
+      eyebrow: "Welcome To",
+      title: "WELL DENTAL CARE",
+      body:
+        "At Well Dental Care, we believe that a healthy smile is the foundation of a happy life. Our clinic was founded on the principle of providing high-quality dental services in a space that feels like home.",
+      body2:
+        "Whether it is your child's first check-up or a specialized procedure, our team of dedicated dentists and assistants is here to support your journey to a more confident smile.",
+    },
+    services: {
+      title: "Popular Service",
+      subtitle: "Explore Our Popular Service.",
+    },
+    dentists: {
+      eyebrow: "Our Dentists",
+      title: "Meet Our Specialist",
+      role: "Dentist",
+    },
+    whyChoose: {
+      titlePrefix: "Why Choose",
+      titleHighlight: "WELL DENTAL CARE?",
+      subtitle:
+        "Delivering advanced, expert, and trustworthy dental care to help every patient achieve a healthy and confident smile.",
+    },
+    trustProof: {
+      title: "Trust Proof",
+      placeholder: "Proof image placeholder",
+    },
+    location: {
+      title: "Here We Are",
+      subtitle: "We open everyday including public holiday.",
+      workingHour: "Working Hour",
+      visitUs: "Visit Us On",
+      phoneNumber: "Phone Number",
+      email: "Email",
+      followUs: "Follow Us",
+      chatWithUs: "Chat With Us",
+    },
+    blog: {
+      eyebrow: "Blog",
+      subtitle: "Discover our latest Blog.",
+    },
+    cta: {
+      title:
+        "Ready to transform your smile into a confident and healthy one?",
+    },
+    footer: {
+      clinic: "Clinic",
+      treatment: "Treatment",
+      workingHour: "Working Hour",
+      visitUs: "Visit Us On",
+      openDaily: "Open daily, including public holidays.",
+      copyright: "© 2026 Well Dental Care. All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+    },
+  },
+};
