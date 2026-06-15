@@ -81,4 +81,23 @@ export const en = {
       terms: "Terms of Service",
     },
   },
+  about: {
+    pageTitle: "About Us",
+    whatWeDo: {
+      title: "What we do?",
+      subtitle:
+        "We care for the person behind the smile, blending advanced technology with a compassionate environment to make high-quality care accessible for everyone.",
+      quote:
+        "What we want to see is to ensure every patient leaves with a smile that radiates confidence and health.",
+      quoteAuthor: "DR. SAMNANG SUN, FOUNDER",
+      visionTitle: "Our Vision",
+      vision:
+        "To be a trusted dental clinic delivering modern, comfortable care that helps every patient achieve a confident, healthy smile.",
+      missionTitle: "Our Mission",
+      mission:
+        "Our Mission is to provide safe, high-quality, and affordable dental care, helping every patient achieve a healthy and confident smile.",
+      newLifePrefix: "A New Life Begin With",
+      newLifeHighlight: "A Confident Smile.",
+    },
+  },
 };
