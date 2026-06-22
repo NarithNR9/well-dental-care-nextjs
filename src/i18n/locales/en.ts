@@ -100,4 +100,26 @@ export const en = {
       newLifeHighlight: "A Confident Smile.",
     },
   },
+  services: {
+    pageTitle: "Service",
+    subtitle:
+      "Providing specialized dental solutions through advanced technology to maintain your lifelong oral health.",
+    searchPlaceholder: "Search",
+    noResults: "No services match your search. Try a different keyword.",
+    popularTitle: "Popular Service",
+    popularSubtitle: "The treatments our patients choose most.",
+    popularBadge: "Popular",
+    detail: {
+      aboutTitle: "About this service",
+      includedTitle: "What's included in this service:",
+      priceTitle: "Start from:",
+      designedForLabel: "Designed for:",
+      suggestionLabel: "Suggestion:",
+      bookNow: "Book Now",
+    },
+    consultCta: {
+      title: "Unsure which treatment is right for you?",
+      subtitle: "Book a consultation or chat to us for more information.",
+    },
+  },
 };
