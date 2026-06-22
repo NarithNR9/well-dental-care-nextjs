@@ -100,21 +100,33 @@ export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
               if (item.key === "service") {
                 return (
                   <div key={item.key}>
-                    <button
-                      aria-expanded={serviceOpen}
+                    <div
                       className={cn(
-                        "flex w-full items-center justify-between py-1 rounded-2xl text-left text-base font-bold text-neutral-700 transition hover:text-primary-700",
+                        "flex w-full items-center justify-between gap-2 rounded-2xl py-1 text-base font-bold text-neutral-700",
                         isActive && "text-primary-700",
                       )}
-                      onClick={() => setServiceOpen((value) => !value)}
-                      type="button"
                     >
-                      <span>{dictionary.nav[item.key]}</span>
-                      <ChevronRight
-                        aria-hidden
-                        className={cn("size-5 transition", serviceOpen && "rotate-90")}
-                      />
-                    </button>
+                      <Link
+                        aria-current={isActive ? "page" : undefined}
+                        className="flex-1 transition hover:text-primary-700"
+                        href={item.href}
+                        onClick={closeMenu}
+                      >
+                        {dictionary.nav[item.key]}
+                      </Link>
+                      <button
+                        aria-expanded={serviceOpen}
+                        aria-label={`${dictionary.nav[item.key]} menu`}
+                        className="grid size-8 shrink-0 place-items-center rounded-full transition hover:text-primary-700"
+                        onClick={() => setServiceOpen((value) => !value)}
+                        type="button"
+                      >
+                        <ChevronRight
+                          aria-hidden
+                          className={cn("size-5 transition", serviceOpen && "rotate-90")}
+                        />
+                      </button>
+                    </div>
 
                     <div
                       className={cn(
