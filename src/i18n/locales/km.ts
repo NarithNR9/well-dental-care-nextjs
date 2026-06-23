@@ -17,6 +17,13 @@ export const km = {
     viewOnGoogleMaps: "មើលលើ Google Maps",
     chatWithUs: "ជជែកជាមួយយើង",
   },
+  notFound: {
+    title: "អូ៎! រកមិនឃើញទេ",
+    description:
+      "សូមអភ័យទោស យើងរកមិនឃើញទំព័រដែលអ្នកស្នើសុំទេ។ វាប្រហែលជាត្រូវបានដកចេញ ឬតំណភ្ជាប់អាចខូច។",
+    returnHome: "ត្រឡប់ទៅទំព័រដើម",
+    toothAlt: "រូបធ្មេញកំពុងព្រួយបារម្ភ",
+  },
   home: {
     hero: {
       label: "Well Dental Care",

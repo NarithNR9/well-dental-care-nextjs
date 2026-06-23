@@ -17,6 +17,13 @@ export const en = {
     viewOnGoogleMaps: "View on Google Maps",
     chatWithUs: "Chat With Us",
   },
+  notFound: {
+    title: "Oops! Page Not Found",
+    description:
+      "Sorry, we couldn't find the page you requested. It may have been removed or the link may be broken.",
+    returnHome: "Return Home",
+    toothAlt: "Worried tooth illustration",
+  },
   home: {
     hero: {
       label: "Well Dental Care",
