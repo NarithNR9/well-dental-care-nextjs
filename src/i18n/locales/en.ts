@@ -129,4 +129,53 @@ export const en = {
       subtitle: "Book a consultation or chat to us for more information.",
     },
   },
+  legal: {
+    privacy: {
+      title: "Privacy Policy",
+      paragraphs: [
+        [
+          {
+            text: "Well Dental Care respects your privacy. Information submitted through our contact and appointment forms, including your ",
+          },
+          {
+            text: "name, phone number, email address, message, selected service, appointment date, and time,",
+            bold: true,
+          },
+          {
+            text: " is used only for communication and appointment management.",
+          },
+        ],
+        [
+          {
+            text: "We do not sell or share your personal information with third parties.",
+          },
+        ],
+      ],
+    },
+    terms: {
+      title: "Terms of Service",
+      paragraphs: [
+        [
+          {
+            text: "By using the Well Dental Care website and Booking Form, Contact Us Form, you agree to provide accurate information.",
+          },
+        ],
+        [
+          {
+            text: "Appointment requests submitted through the website are subject to confirmation by our clinic.",
+          },
+        ],
+        [
+          {
+            text: "Treatment information and pricing displayed on the website are for general reference and may vary depending on individual cases.",
+          },
+        ],
+        [
+          {
+            text: "Well Dental Care reserves the right to update website content and appointment availability at any time.",
+          },
+        ],
+      ],
+    },
+  },
 };
