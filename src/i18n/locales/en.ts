@@ -212,4 +212,57 @@ export const en = {
       time: "Please select a time.",
     },
   },
+  contact: {
+    pageTitle: "Contact Us",
+    hero: {
+      titlePrefix: "WE ARE HERE ",
+      titleHighlight: "TO HELP YOU",
+      subtitle:
+        "Have questions about treatments, pricing, or appointments? Our team is ready to assist you.",
+      chat: "Chat With Us",
+      call: "Call Now",
+      imageAlt: "Well Dental Care reception area",
+    },
+    hereWeAre: {
+      title: "Here We Are",
+      subtitle: "We open everyday include public holiday.",
+      workingHour: "Working Hour",
+      visitUs: "Visit Us On",
+    },
+    info: {
+      title: "Contact Information",
+      subtitle:
+        "Choose the most convenient way for you to connect with our team.",
+      phone: "Phone Number",
+      email: "Email",
+      followUs: "Follow Us",
+      chatWithUs: "Chat With Us",
+    },
+    form: {
+      title: "Send a Message",
+      subtitle:
+        "Our team will review your inquiry and respond as soon as possible.",
+      nameLabel: "Name",
+      namePlaceholder: "Full Name",
+      phoneLabel: "Phone",
+      phonePlaceholder: "Phone Number",
+      emailLabel: "Email",
+      emailPlaceholder: "Email Address",
+      messageLabel: "Message",
+      messagePlaceholder: "How can we help you?",
+      submit: "Send Message",
+      submitting: "Sending...",
+      successTitle: "Message sent!",
+      successMessage:
+        "Thank you for reaching out. Our team will respond as soon as possible.",
+      sendAnother: "Send another message",
+      imageAlt: "Well Dental Care signboard",
+      validation: {
+        name: "Please enter your full name.",
+        phone: "Please enter a valid phone number.",
+        email: "Please enter a valid email address.",
+        message: "Please enter a message.",
+      },
+    },
+  },
 };
