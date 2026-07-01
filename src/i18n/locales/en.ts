@@ -29,7 +29,9 @@ export const en = {
     subtitle:
       "Transparent, up-front pricing for our most requested treatments. Final costs are confirmed after your consultation.",
     serviceColumn: "Service",
-    priceColumn: "Price Range",
+    beforeColumn: "Before",
+    nowColumn: "Now",
+    free: "Free",
     disclaimer:
       "Prices are indicative and may vary based on your individual case. Contact us for a personalized quote.",
   },
