@@ -17,6 +17,11 @@ export const km = {
     viewOnGoogleMaps: "មើលលើ Google Maps",
     chatWithUs: "ជជែកជាមួយយើង",
   },
+  technology: {
+    title: "បច្ចេកវិទ្យា",
+    subtitle:
+      "គ្លីនិករបស់យើងបំពាក់ដោយឧបករណ៍ទំនើប និងឈានមុខគេ ដែលរចនាឡើងដើម្បីផ្តល់នូវភាពជាក់លាក់ខ្ពស់ និងបទពិសោធន៍កាន់តែស្រួលក្នុងរាល់ការមកជួប។",
+  },
   notFound: {
     title: "អូ៎! រកមិនឃើញទេ",
     description:
