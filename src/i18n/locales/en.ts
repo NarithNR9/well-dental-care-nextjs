@@ -17,6 +17,11 @@ export const en = {
     viewOnGoogleMaps: "View on Google Maps",
     chatWithUs: "Chat With Us",
   },
+  technology: {
+    title: "Technology",
+    subtitle:
+      "Our clinic is equipped with modern, industry-leading tools designed to provide higher precision and a more comfortable experience during every visit.",
+  },
   notFound: {
     title: "Oops! Page Not Found",
     description:
