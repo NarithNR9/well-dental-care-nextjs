@@ -24,6 +24,7 @@ export function Footer() {
     { label: dictionary.nav.service, href: "/services" },
     { label: dictionary.nav.technology, href: "/technology" },
     { label: dictionary.nav.result, href: "/result" },
+    { label: dictionary.nav.priceList, href: "/price-list" },
   ];
 
   return (

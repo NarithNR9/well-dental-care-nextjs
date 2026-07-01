@@ -7,38 +7,31 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import { CalendarDays, ChevronRight, Menu, X } from "lucide-react";
 import { CTAButton } from "@/components/common/CTAButton";
+import { ExploreMenu } from "@/components/layout/ExploreMenu";
 import { ServiceMenuAccordion } from "@/components/layout/ServiceMenuAccordion";
+import type { NavItem } from "@/components/layout/Header";
+import { exploreMenuItems } from "@/data/exploreMenu";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { cn } from "@/lib/utils";
-
-type NavItem = {
-  key:
-    | "home"
-    | "about"
-    | "service"
-    | "technology"
-    | "result"
-    | "ourClinic"
-    | "blog"
-    | "contact";
-  href: string;
-};
 
 export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
   const { dictionary, locale } = useLocale();
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [serviceOpen, setServiceOpen] = React.useState(false);
+  const [exploreOpen, setExploreOpen] = React.useState(false);
   const portalTarget = typeof document === "undefined" ? null : document.body;
 
   const closeMenu = () => {
     setOpen(false);
     setServiceOpen(false);
+    setExploreOpen(false);
   };
 
   const toggleMenu = () => {
     if (open) {
       setServiceOpen(false);
+      setExploreOpen(false);
     }
 
     setOpen((value) => !value);
@@ -95,7 +88,51 @@ export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
             className="grid flex-1 content-start gap-2 overflow-y-auto pb-6"
           >
             {navItems.map((item) => {
-              const isActive = isNavItemActive(pathname, item.href);
+              const isActive =
+                item.key === "explore"
+                  ? exploreMenuItems.some((child) =>
+                      isNavItemActive(pathname, child.href),
+                    )
+                  : isNavItemActive(pathname, item.href);
+
+              if (item.key === "explore") {
+                return (
+                  <div key={item.key}>
+                    <button
+                      aria-expanded={exploreOpen}
+                      className={cn(
+                        "flex w-full items-center justify-between gap-2 rounded-2xl py-1 text-base font-bold text-neutral-700 transition hover:text-primary-700",
+                        isActive && "text-primary-700",
+                      )}
+                      onClick={() => setExploreOpen((value) => !value)}
+                      type="button"
+                    >
+                      <span>{dictionary.nav[item.key]}</span>
+                      <ChevronRight
+                        aria-hidden
+                        className={cn("size-5 transition", exploreOpen && "rotate-90")}
+                      />
+                    </button>
+
+                    <div
+                      className={cn(
+                        "grid overflow-hidden transition-[grid-template-rows,opacity] duration-200",
+                        exploreOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0",
+                      )}
+                    >
+                      <div className={cn("min-h-0", exploreOpen && "pt-2")}>
+                        <ExploreMenu
+                          dictionary={dictionary}
+                          onNavigate={closeMenu}
+                          variant="mobile"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
 
               if (item.key === "service") {
                 return (
@@ -109,7 +146,7 @@ export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
                       <Link
                         aria-current={isActive ? "page" : undefined}
                         className="flex-1 transition hover:text-primary-700"
-                        href={item.href}
+                        href={item.href ?? "#"}
                         onClick={closeMenu}
                       >
                         {dictionary.nav[item.key]}
@@ -155,7 +192,7 @@ export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
                     "rounded-2xl px-0 py-1 text-base font-bold text-neutral-700 transition hover:text-primary-700",
                     isActive && "text-primary-700",
                   )}
-                  href={item.href}
+                  href={item.href ?? "#"}
                   key={item.key}
                   onClick={closeMenu}
                 >
@@ -194,7 +231,11 @@ export function MobileNav({ navItems }: { navItems: readonly NavItem[] }) {
   );
 }
 
-function isNavItemActive(pathname: string, href: string) {
+function isNavItemActive(pathname: string, href: string | undefined) {
+  if (!href) {
+    return false;
+  }
+
   if (href === "/") {
     return pathname === "/";
   }

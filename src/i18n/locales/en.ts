@@ -5,7 +5,9 @@ export const en = {
     service: "Service",
     technology: "Technology",
     result: "Result",
+    explore: "Explore",
     ourClinic: "Our Clinic",
+    priceList: "Price List",
     blog: "Blog",
     contact: "Contact Us",
   },
@@ -21,6 +23,15 @@ export const en = {
     title: "Technology",
     subtitle:
       "Our clinic is equipped with modern, industry-leading tools designed to provide higher precision and a more comfortable experience during every visit.",
+  },
+  priceList: {
+    title: "Price List",
+    subtitle:
+      "Transparent, up-front pricing for our most requested treatments. Final costs are confirmed after your consultation.",
+    serviceColumn: "Service",
+    priceColumn: "Price Range",
+    disclaimer:
+      "Prices are indicative and may vary based on your individual case. Contact us for a personalized quote.",
   },
   notFound: {
     title: "Oops! Page Not Found",

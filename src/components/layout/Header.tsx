@@ -3,36 +3,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarDays, ChevronDown } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import { CTAButton } from "@/components/common/CTAButton";
 import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
+import { ExploreDropdown } from "@/components/layout/ExploreDropdown";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ServiceDropdown } from "@/components/layout/ServiceDropdown";
+import { exploreMenuItems } from "@/data/exploreMenu";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { cn } from "@/lib/utils";
 
-const navItems: {
+export type NavItem = {
   key:
     | "home"
     | "about"
     | "service"
     | "technology"
     | "result"
-    | "ourClinic"
-    | "blog"
+    | "explore"
     | "contact";
-  href: string;
+  /** Absent for pure dropdown groups like "explore". */
+  href?: string;
   hasMenu?: boolean;
-}[] = [
+};
+
+const navItems: NavItem[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
   { key: "service", href: "/services", hasMenu: true },
   { key: "technology", href: "/technology" },
   { key: "result", href: "/result" },
-  { key: "ourClinic", href: "/our-clinic" },
-  { key: "blog", href: "/blog" },
+  { key: "explore", hasMenu: true },
   { key: "contact", href: "/contact" },
-] as const;
+];
 
 export function Header() {
   const { dictionary } = useLocale();
@@ -58,11 +61,24 @@ export function Header() {
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => {
-            const isActive = isNavItemActive(pathname, item.href);
+            const isActive =
+              item.key === "explore"
+                ? exploreMenuItems.some((child) => isNavItemActive(pathname, child.href))
+                : isNavItemActive(pathname, item.href);
 
             if (item.key === "service") {
               return (
                 <ServiceDropdown
+                  isActive={isActive}
+                  key={item.key}
+                  label={dictionary.nav[item.key]}
+                />
+              );
+            }
+
+            if (item.key === "explore") {
+              return (
+                <ExploreDropdown
                   isActive={isActive}
                   key={item.key}
                   label={dictionary.nav[item.key]}
@@ -77,11 +93,10 @@ export function Header() {
                   "inline-flex items-center gap-1 text-base font-semibold text-neutral-700 transition hover:text-primary-700",
                   isActive && "text-primary-700",
                 )}
-                href={item.href}
+                href={item.href ?? "#"}
                 key={item.key}
               >
                 {dictionary.nav[item.key]}
-                {item.hasMenu ? <ChevronDown aria-hidden className="size-3.5" /> : null}
               </Link>
             );
           })}
@@ -103,7 +118,11 @@ export function Header() {
   );
 }
 
-function isNavItemActive(pathname: string, href: string) {
+function isNavItemActive(pathname: string, href: string | undefined) {
+  if (!href) {
+    return false;
+  }
+
   if (href === "/") {
     return pathname === "/";
   }
