@@ -29,6 +29,13 @@ export const en = {
     subtitle:
       "Take a closer look at our modern, comfortable and patient-friendly clinic.",
   },
+  blog: {
+    title: "Blog",
+    subtitle:
+      "Discover the latest in modern dental care and essential guides for your family's lifelong dental wellness.",
+    minRead: "min read",
+    continueReading: "Continue Reading",
+  },
   result: {
     title: "Treatment Result",
     subtitle:
