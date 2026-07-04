@@ -34,7 +34,7 @@ export const contact = {
     },
     {
       name: "Messenger",
-      url: "#",
+      url: "https://www.messenger.com/t/61560815427764",
       icon: "/images/icons/Messenger.svg",
     },
   ],

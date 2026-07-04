@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanuman, Inter } from "next/font/google";
+import { FloatingContactButton } from "@/components/common/FloatingContactButton";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingContactButton />
         </LocaleProvider>
       </body>
     </html>
