@@ -88,7 +88,7 @@ export function FloatingContactButton() {
 
   return (
     <div
-      className="fixed bottom-5 right-4 z-40 flex flex-col items-end gap-3 min-[744px]:bottom-6 min-[744px]:right-6"
+      className="fixed bottom-4 right-3 z-40 flex flex-col items-end gap-3 min-[744px]:bottom-6 min-[744px]:right-6"
       ref={containerRef}
     >
       <div
@@ -105,18 +105,18 @@ export function FloatingContactButton() {
 
           return (
             <a
-              className="flex w-48 items-center gap-3 rounded-full border border-primary-500 bg-white px-4 py-2.5 transition hover:bg-primary cursor-pointer"
+              className="flex w-42 items-center gap-3 rounded-full border border-primary-500 bg-white px-3 py-2 transition hover:bg-primary cursor-pointer"
               href={action.href}
               key={action.name}
               onClick={() => setOpen(false)}
               rel={isExternal ? "noopener noreferrer" : undefined}
               target={isExternal ? "_blank" : undefined}
             >
-              <span className="grid size-7 shrink-0 place-items-center">
+              <span className="grid size-6 shrink-0 place-items-center">
                 {action.icon ? (
-                  <Image alt="" className="size-7" height={28} src={action.icon} width={28} />
+                  <Image alt="" className="size-6" height={28} src={action.icon} width={28} />
                 ) : (
-                  <Phone aria-hidden className="size-6 text-primary-700" />
+                  <Phone aria-hidden className="size-5 text-primary-700" />
                 )}
               </span>
               <span className="text-body font-semibold text-primary-900">{action.name}</span>
@@ -129,11 +129,11 @@ export function FloatingContactButton() {
         aria-controls="floating-contact-menu"
         aria-expanded={open}
         aria-label={dictionary.common.chatWithUs}
-        className="grid size-14 place-items-center rounded-full bg-primary-500 text-primary-900 shadow-design-lg transition duration-200 hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700 min-[744px]:size-16"
+        className="grid size-10 place-items-center rounded-full bg-primary-500 text-primary-900 shadow-design-lg transition duration-200 hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700 min-[744px]:size-14"
         onClick={() => setOpen((value) => !value)}
         type="button"
       >
-        {open ? <X aria-hidden className="size-7" /> : <HeadsetIcon />}
+        {open ? <X aria-hidden className="size-6" /> : <HeadsetIcon />}
       </button>
     </div>
   );
