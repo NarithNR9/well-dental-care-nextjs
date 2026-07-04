@@ -24,6 +24,11 @@ export const en = {
     subtitle:
       "Our clinic is equipped with modern, industry-leading tools designed to provide higher precision and a more comfortable experience during every visit.",
   },
+  ourClinic: {
+    title: "Our Clinic",
+    subtitle:
+      "Take a closer look at our modern, comfortable and patient-friendly clinic.",
+  },
   result: {
     title: "Treatment Result",
     subtitle:
