@@ -24,6 +24,13 @@ export const en = {
     subtitle:
       "Our clinic is equipped with modern, industry-leading tools designed to provide higher precision and a more comfortable experience during every visit.",
   },
+  result: {
+    title: "Treatment Result",
+    subtitle:
+      "See how our specialized care and advanced clinical techniques help our patients achieve healthy, transformative results.",
+    beforeLabel: "Before",
+    afterLabel: "After",
+  },
   priceList: {
     title: "Price List",
     subtitle:
