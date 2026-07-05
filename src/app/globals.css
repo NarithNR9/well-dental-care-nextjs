@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), var(--font-hanuman), ui-sans-serif, system-ui, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --font-heading: var(--font-sans);
   --color-primary-50: var(--primary-50);
@@ -351,5 +351,20 @@
   .hero-slideshow-track,
   .hero-slideshow-dot {
     animation: none;
+  }
+}
+
+/* Slanted, rounded "trapezoid" shape for the contact hero photo (desktop only).
+   The mask viewBox is 2.5:1 to match lg:aspect-[2.5/1], so the rounded corners
+   scale uniformly and stay circular instead of stretching. */
+@media (min-width: 1024px) {
+  .clinic-reception-shape {
+    --clinic-shape: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%20100'%20preserveAspectRatio='none'%3E%3Cpath%20d='M34%200L234%200Q250%200%20250%2016L250%2084Q250%20100%20234%20100L14%20100Q0%20100%202%2086L24%2016Q28%202%2034%200Z'%20fill='%23fff'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--clinic-shape);
+    mask-image: var(--clinic-shape);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
   }
 }

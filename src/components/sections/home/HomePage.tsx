@@ -19,9 +19,7 @@ export function HomePage() {
       <HeroSection dictionary={dictionary} />
       <WelcomeSection dictionary={dictionary} />
       <PopularServicesSection dictionary={dictionary} locale={locale} />
-      <DentistsSection dictionary={dictionary} locale={locale} />
       <WhyChooseSection dictionary={dictionary} locale={locale} />
-      <TrustProofSection dictionary={dictionary} />
       <LocationSection dictionary={dictionary} locale={locale} />
       <BlogSection dictionary={dictionary} locale={locale} />
       <HomeCTASection dictionary={dictionary} />

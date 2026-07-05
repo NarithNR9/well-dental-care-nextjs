@@ -24,6 +24,7 @@ export function Footer() {
     { label: dictionary.nav.service, href: "/services" },
     { label: dictionary.nav.technology, href: "/technology" },
     { label: dictionary.nav.result, href: "/result" },
+    { label: dictionary.nav.priceList, href: "/price-list" },
   ];
 
   return (
@@ -40,7 +41,7 @@ export function Footer() {
           sizes="100vw"
         />
 
-        <div className="relative z-10 mx-auto max-w-[1440px] pb-8 min-[744px]:grid min-[744px]:grid-cols-[280px_1fr] min-[744px]:items-center min-[744px]:gap-10 min-[744px]:pr-6 lg:grid-cols-[320px_1fr] lg:gap-16 lg:pr-16">
+        <div className="relative z-10 mx-auto max-w-[1440px] py-8 min-[744px]:grid min-[744px]:grid-cols-[280px_1fr] min-[744px]:items-center min-[744px]:gap-10 min-[744px]:pr-6 lg:grid-cols-[320px_1fr] lg:gap-16 lg:pr-16">
           {/* Left: Logo + Clinic Building Background (desktop only) + Social */}
           <div className="relative min-h-[240px] overflow-hidden min-[744px]:min-h-[320px] min-[744px]:h-full min-[744px]:rounded-[16px]">
             {/* Clinic building background image - desktop only */}
@@ -102,7 +103,7 @@ export function Footer() {
                 title={dictionary.home.footer.treatment}
               />
               {/* Working Hour - always visible */}
-              <div className="border-b py-4 sm:border-t-0 sm:py-0">
+              <div className="py-4 sm:border-t-0 sm:py-0">
                 <h3 className="text-base font-bold text-primary-700">
                   {dictionary.home.footer.workingHour}
                 </h3>
@@ -134,7 +135,7 @@ export function Footer() {
             </div>
 
             {/* Bottom Bar */}
-            <div className="mt-8 border-t border-primary-500/20 pt-5">
+            <div className="mt-8 border-t border-neutral-200 pt-5">
               <div className="text-caption flex flex-col items-center justify-center gap-2 text-center text-neutral-500">
                 <div className="flex items-center gap-2">
                   <Link
@@ -172,7 +173,7 @@ function CollapsibleFooterColumn({
   const [open, setOpen] = React.useState(false);
 
   return (
-    <div className="border-b sm:border-t-0">
+    <div className="sm:border-t-0">
       {/* Mobile: collapsible button */}
       <button
         aria-expanded={open}

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { ServiceMenuAccordion } from "@/components/layout/ServiceMenuAccordion";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -36,19 +37,31 @@ export function ServiceDropdown({ isActive, label }: ServiceDropdownProps) {
 
   return (
     <div className="relative" ref={menuRef}>
-      <button
-        aria-controls="desktop-service-menu"
-        aria-expanded={open}
+      <div
         className={cn(
-          "inline-flex items-center gap-1 text-base font-semibold text-neutral-700 transition hover:text-primary-700 cursor-pointer",
+          "inline-flex items-center gap-1 text-base font-semibold text-neutral-700",
           isActive && "text-primary-700",
         )}
-        onClick={() => setOpen((value) => !value)}
-        type="button"
       >
-        {label}
-        <ChevronDown aria-hidden className={cn("size-4 transition", open && "rotate-180")} />
-      </button>
+        <Link
+          aria-current={isActive ? "page" : undefined}
+          className="transition hover:text-primary-700"
+          href="/services"
+          onClick={() => setOpen(false)}
+        >
+          {label}
+        </Link>
+        <button
+          aria-controls="desktop-service-menu"
+          aria-expanded={open}
+          aria-label={`${label} menu`}
+          className="inline-flex cursor-pointer items-center transition hover:text-primary-700"
+          onClick={() => setOpen((value) => !value)}
+          type="button"
+        >
+          <ChevronDown aria-hidden className={cn("size-4 transition", open && "rotate-180")} />
+        </button>
+      </div>
 
       <div
         className={cn(

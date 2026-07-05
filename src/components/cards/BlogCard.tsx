@@ -19,7 +19,7 @@ type BlogCardProps = {
 
 export function BlogCard({ post, locale, readMoreLabel }: BlogCardProps) {
   return (
-    <article className="overflow-hidden bg-white">
+    <article className="overflow-hidden">
       <Image
         src={post.image}
         alt={post.title}
